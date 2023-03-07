@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <AlternateEmailIcon />
-      <Box>
+      <Box className="container">
         <LocalPhoneIcon />
         <span>(XX)XXXX-XXXX</span>
       </Box>
