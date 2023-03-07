@@ -5,19 +5,25 @@ import products from "../products/products.js";
 
 const Content = () => {
   return (
-    <Container>
+    <Container
+      style={{
+        display: "flex",
+        justifyContent: "space-evenly",
+        textAlign: "center",
+      }}
+    >
       {products.map((product) => {
         return (
           <Box key={product.id}>
-            <Paper elevation={3}>
+            <Paper elevation={5}>
               <img
                 src={product.img}
                 alt={product.name}
-                width={100}
-                height={100}
+                width={143}
+                height={140}
               />
-              <p>{product.name}</p>
-              <p>{product.price}</p>
+              <p className="name">{product.name}</p>
+              <p className="price">R$ {product.price}</p>
               <button className="buyBtn">Comprar</button>
             </Paper>
           </Box>
